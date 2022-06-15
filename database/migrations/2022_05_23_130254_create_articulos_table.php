@@ -20,7 +20,7 @@ class CreateArticulosTable extends Migration
             $table->integer("puntuacion");
             $table->integer("gramos");
             $table->string("name");
-            $table->integer("imagen");
+            $table->string("imagen");
             $table->integer("descuento");
             $table->timestamps();
         });
