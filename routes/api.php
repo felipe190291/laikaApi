@@ -19,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/articulos',"App\Http\Controllers\ControllerArticulo@index");//mostrar all registros
 Route::post('/articulos',"App\Http\Controllers\ControllerArticulo@store");
+Route::put('/articulos/{id}',"App\Http\Controllers\ControllerArticulo@update");
+Route::delete('/articulos/{id}',"App\Http\Controllers\ControllerArticulo@destroy");

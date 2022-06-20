@@ -76,9 +76,18 @@ class ControllerArticulo extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $articulo=Articulo::findOrFail($request->id);
+        $articulo -> descripcion = $request -> descripcion;
+        $articulo -> precio = $request -> precio;
+        $articulo -> puntuacion = $request -> puntuacion;
+        $articulo -> gramos = $request -> gramos;
+        $articulo -> imagen = $request -> imagen;
+        $articulo -> descuento = $request -> descuento;
+        $articulo -> name = $request -> name;
+        $articulo ->save();
+        return $articulo;
     }
 
     /**
@@ -87,8 +96,9 @@ class ControllerArticulo extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+         $articulo=Articulo::destroy($request->id);
+      return $articulo;
     }
 }
