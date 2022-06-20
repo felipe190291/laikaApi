@@ -1,9 +1,10 @@
 <template >
    <div  >
-       <h1 class="text-center">
-           Gestionar productos
+    <div class="wrapper"> <h1 class="title_incial" >
+           LAIKA
 
-       </h1>
+       </h1></div>
+      
 
       <!-- Button trigger modal -->
 <button @click="modificar=false;openModal()" type="button" class="btn my-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="button-new-product">

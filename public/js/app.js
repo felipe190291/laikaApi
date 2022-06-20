@@ -5366,6 +5366,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -28515,9 +28516,7 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h1", { staticClass: "text-center" }, [
-      _vm._v("\n           Gestionar productos\n\n       "),
-    ]),
+    _vm._m(0),
     _vm._v(" "),
     _c(
       "button",
@@ -28823,7 +28822,7 @@ var render = function () {
     _vm._v(" "),
     _c("div", { staticClass: "table-response" }, [
       _c("table", { staticClass: "table   table-hover align-middle" }, [
-        _vm._m(0),
+        _vm._m(1),
         _vm._v(" "),
         _c(
           "tbody",
@@ -28901,6 +28900,16 @@ var render = function () {
   ])
 }
 var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "wrapper" }, [
+      _c("h1", { staticClass: "title_incial" }, [
+        _vm._v("\n           LAIKA\n\n       "),
+      ]),
+    ])
+  },
   function () {
     var _vm = this
     var _h = _vm.$createElement

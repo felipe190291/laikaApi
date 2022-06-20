@@ -5,9 +5,58 @@
         overflow: hidden;
         padding:2vw;
     }
-   
-
 }
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900");
+
+$size: 10vw;
+$shadow: 35;
+$primary: white;
+$secondary: black;
+
+
+.wrapper {
+  animation: sliding-background 40s linear infinite;
+  background: url("https://laika.com.co/cdn-cgi/image/format=auto,quality=80,sharpen=1/https://laikapp.s3.amazonaws.com/dev_images_banners/165419467820220502-ALL-ALL-RET-BAN-ALL-Agrega-a-Mascota%20%282%29%20%281%29.jpg") no-repeat left / 110%;
+ 
+  text-align: center;
+  width: 100vw;
+}
+
+.title_incial {
+  background: $primary;
+  color: $secondary;
+  font-family: "Montserrat", sans-serif;
+  font-size: $size;
+  letter-spacing: 3vw;
+  margin: 0;
+  mix-blend-mode: lighten;
+  text-transform: uppercase;
+  $text-shadow: ();
+  @for $i from 1 through $shadow {
+    $text-shadow: $text-shadow, 1px * $i 1px * $i $secondary;
+  }
+  text-shadow: 0 0 0px, $text-shadow;
+
+  &:before {
+    color: $primary;
+    content: attr(data-text);
+    margin-left: -1%;
+    margin-top: -1%;
+    position: absolute;
+  }
+}
+
+@keyframes sliding-background {
+  0%,
+  100% {
+    background-position: 0 40%;
+  }
+
+  50% {
+    background-position: 100% 40%;
+  }
+}
+
 #app nav{
     color:white !important;
     background-color: #603e85 !important;
