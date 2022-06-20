@@ -6,7 +6,7 @@
        </h1>
 
       <!-- Button trigger modal -->
-<button @click="modificar=false;openModal()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+<button @click="modificar=false;openModal()" type="button" class="btn my-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="button-new-product">
 Nuevo producto
 </button>
 
@@ -20,19 +20,19 @@ Nuevo producto
       </div>
       <div class="modal-body">
         <div>
-            <label for="name"> </label>
+            <label for="name" class="my-1"> Nombre</label>
             <input v-model="articulo.name" type="text" class="form-control" id="name " placeholder="Nombre"/>
-            <label for="descripcion"> </label>
-            <input v-model="articulo.descripcion" type="text" class="form-control" id="descripcion " placeholder="Descripcion"/>
-            <label for="precio"> </label>
+            <label for="descripcion" class="my-1"> Descripción</label>
+            <input v-model="articulo.descripcion" type="text" class="form-control" id="descripcion " placeholder="Descripción"/>
+            <label for="precio" class="my-1">Precio </label>
             <input v-model="articulo.precio" type="number" class="form-control" id="precio " placeholder="Precio"/>
-            <label for="puntuacion"> </label>
+            <label for="puntuacion" class="my-1">Puntuación </label>
             <input v-model="articulo.puntuacion" type="number" class="form-control" id="puntuacion " placeholder="Puntuación"/>
-            <label for="gramos"> </label>
+            <label for="gramos" class="my-1">Gramos </label>
             <input v-model="articulo.gramos" type="number" class="form-control" id="gramos " placeholder="Gramos"/>
-            <label for="imagen"> </label>
+            <label for="imagen" class="my-1"> Url imagen</label>
             <input v-model="articulo.imagen" type="text" class="form-control" id="imagen " placeholder="Url imagen"/>
-            <label for="descuento"> </label>
+            <label for="descuento" class="my-1">Descuento </label>
             <input v-model="articulo.descuento" type="number" class="form-control" id="descuento " placeholder="Descuento"/>
         </div>
       </div>
@@ -44,7 +44,7 @@ Nuevo producto
   </div>
 </div>
        <div class="table-response">
-       <table class="table table-dark table-hover align-middle" 
+       <table class="table   table-hover align-middle"  
   >
    <thead class="thead-dark text-center">
     <tr>
@@ -60,7 +60,7 @@ Nuevo producto
     </tr>
   </thead>
   <tbody >
-    <tr v-for="product in articulos" :key="product.id">
+    <tr v-for="product in articulos" :key="product.id" class="text-center">
       <th scope="row">{{product.id}}</th>
       <td >{{product.name}}</td>
       <td >{{product.descripcion}}</td>

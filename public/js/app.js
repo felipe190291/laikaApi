@@ -28522,11 +28522,12 @@ var render = function () {
     _c(
       "button",
       {
-        staticClass: "btn btn-primary",
+        staticClass: "btn my-4",
         attrs: {
           type: "button",
           "data-bs-toggle": "modal",
           "data-bs-target": "#staticBackdrop",
+          id: "button-new-product",
         },
         on: {
           click: function ($event) {
@@ -28577,7 +28578,9 @@ var render = function () {
             _vm._v(" "),
             _c("div", { staticClass: "modal-body" }, [
               _c("div", [
-                _c("label", { attrs: { for: "name" } }),
+                _c("label", { staticClass: "my-1", attrs: { for: "name" } }, [
+                  _vm._v(" Nombre"),
+                ]),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
@@ -28601,7 +28604,11 @@ var render = function () {
                   },
                 }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "descripcion" } }),
+                _c(
+                  "label",
+                  { staticClass: "my-1", attrs: { for: "descripcion" } },
+                  [_vm._v(" Descripción")]
+                ),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
@@ -28616,7 +28623,7 @@ var render = function () {
                   attrs: {
                     type: "text",
                     id: "descripcion ",
-                    placeholder: "Descripcion",
+                    placeholder: "Descripción",
                   },
                   domProps: { value: _vm.articulo.descripcion },
                   on: {
@@ -28629,7 +28636,9 @@ var render = function () {
                   },
                 }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "precio" } }),
+                _c("label", { staticClass: "my-1", attrs: { for: "precio" } }, [
+                  _vm._v("Precio "),
+                ]),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
@@ -28657,7 +28666,11 @@ var render = function () {
                   },
                 }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "puntuacion" } }),
+                _c(
+                  "label",
+                  { staticClass: "my-1", attrs: { for: "puntuacion" } },
+                  [_vm._v("Puntuación ")]
+                ),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
@@ -28685,7 +28698,9 @@ var render = function () {
                   },
                 }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "gramos" } }),
+                _c("label", { staticClass: "my-1", attrs: { for: "gramos" } }, [
+                  _vm._v("Gramos "),
+                ]),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
@@ -28713,7 +28728,9 @@ var render = function () {
                   },
                 }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "imagen" } }),
+                _c("label", { staticClass: "my-1", attrs: { for: "imagen" } }, [
+                  _vm._v(" Url imagen"),
+                ]),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
@@ -28741,7 +28758,11 @@ var render = function () {
                   },
                 }),
                 _vm._v(" "),
-                _c("label", { attrs: { for: "descuento" } }),
+                _c(
+                  "label",
+                  { staticClass: "my-1", attrs: { for: "descuento" } },
+                  [_vm._v("Descuento ")]
+                ),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
@@ -28801,85 +28822,81 @@ var render = function () {
     ),
     _vm._v(" "),
     _c("div", { staticClass: "table-response" }, [
-      _c(
-        "table",
-        { staticClass: "table table-dark table-hover align-middle" },
-        [
-          _vm._m(0),
-          _vm._v(" "),
-          _c(
-            "tbody",
-            _vm._l(_vm.articulos, function (product) {
-              return _c("tr", { key: product.id }, [
-                _c("th", { attrs: { scope: "row" } }, [
-                  _vm._v(_vm._s(product.id)),
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(product.name))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(product.descripcion))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(product.precio))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(product.puntuacion))]),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(product.gramos))]),
-                _vm._v(" "),
+      _c("table", { staticClass: "table   table-hover align-middle" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "tbody",
+          _vm._l(_vm.articulos, function (product) {
+            return _c("tr", { key: product.id, staticClass: "text-center" }, [
+              _c("th", { attrs: { scope: "row" } }, [
+                _vm._v(_vm._s(product.id)),
+              ]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(product.name))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(product.descripcion))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(product.precio))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(product.puntuacion))]),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(product.gramos))]),
+              _vm._v(" "),
+              _c(
+                "td",
+                {
+                  staticStyle: {
+                    "max-width": "200px",
+                    overflow: "hidden",
+                    "white-space": "nowrap",
+                    "text-overflow": "ellipsis",
+                  },
+                },
+                [_vm._v(_vm._s(product.imagen))]
+              ),
+              _vm._v(" "),
+              _c("td", [_vm._v(_vm._s(product.descuento))]),
+              _vm._v(" "),
+              _c("td", [
                 _c(
-                  "td",
+                  "button",
                   {
-                    staticStyle: {
-                      "max-width": "200px",
-                      overflow: "hidden",
-                      "white-space": "nowrap",
-                      "text-overflow": "ellipsis",
+                    staticClass: "btn btn-warning",
+                    attrs: {
+                      "data-bs-toggle": "modal",
+                      "data-bs-target": "#staticBackdrop",
+                    },
+                    on: {
+                      click: function ($event) {
+                        _vm.modificar = true
+                        _vm.openModal(product)
+                      },
                     },
                   },
-                  [_vm._v(_vm._s(product.imagen))]
+                  [_vm._v("Editar")]
                 ),
-                _vm._v(" "),
-                _c("td", [_vm._v(_vm._s(product.descuento))]),
-                _vm._v(" "),
-                _c("td", [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-warning",
-                      attrs: {
-                        "data-bs-toggle": "modal",
-                        "data-bs-target": "#staticBackdrop",
-                      },
-                      on: {
-                        click: function ($event) {
-                          _vm.modificar = true
-                          _vm.openModal(product)
-                        },
+              ]),
+              _vm._v(" "),
+              _c("td", [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-danger",
+                    on: {
+                      click: function ($event) {
+                        return _vm.eliminar(product.id)
                       },
                     },
-                    [_vm._v("Editar")]
-                  ),
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-danger",
-                      on: {
-                        click: function ($event) {
-                          return _vm.eliminar(product.id)
-                        },
-                      },
-                    },
-                    [_vm._v("Eliminar")]
-                  ),
-                ]),
-              ])
-            }),
-            0
-          ),
-        ]
-      ),
+                  },
+                  [_vm._v("Eliminar")]
+                ),
+              ]),
+            ])
+          }),
+          0
+        ),
+      ]),
     ]),
   ])
 }
